@@ -3,23 +3,19 @@
 ```bash
 lxc-ls
 lxc-start
-lxc-start -d
+lxc-start
 lxc-console
 lxc-stop
-lxc-clone <source> <target>
-lxc-create -t <template> -f <config file>
+lxc-clone 
+lxc-create
 lxc-destroy
-
-lxc-execute -n <name> -- <command>  # Run command in new container
-lxc-attach  -n <name> -- <command>  # Run command in running container
-
-lxc-monitor    # Monitor containers for state changes
-lxc-wait       # Wait for a state change
-lxc-info       # Give details on a container
-
+lxc-execute
+lxc-attach
+lxc-monitor
+lxc-wait
+lxc-info
 lxc-freeze
 lxc-unfreeze
-
 lxc-netstat
 lxc-ps
 ```
