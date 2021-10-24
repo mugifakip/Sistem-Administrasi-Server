@@ -1,4 +1,5 @@
 # Praktikum 1 Virtualisasi
+*M Mugi Fakip Anugrah & Kevin Surya [group 14]*
 ## Linux Container Commands Tab
 ```bash
 lxc-ls
@@ -85,7 +86,7 @@ cd /var/lib/lxc/ubuntu_server
 ````
 ![landing](assets/ubuntu_landing_configg.gif)
 
-  - ubuntu_landing autostarted success (sorry i made a typo on roofs -> rootf inside config)
+  - ubuntu_landing autostarted success (sorry 😥 i made a typo on roofs -> rootfs inside config)
 
 ![landing](assets/started.png)
 
@@ -100,5 +101,36 @@ cd /var/lib/lxc/ubuntu_server
 
 ------
 
-7. 
-8. 
+7. Untuk kebutuhan presentasi mereka, browser di laptop mereka harus dapat mengakses ketiga url tersebut.
+
+  - Test curl didalam ubuntu server.
+![landing](assets/assets/curl-test.gif)
+
+  - Test di browser.
+
+Landing Page
+http://vm.local
+![landing](assets/lndng.png)
+
+App Page
+http://vm.local/app
+![landing](assets/5.6.png)
+
+Blog Page
+http://vm.local/blog
+![landing](assets/7.4.png)
+
+------
+
+8. Analisis
+
+  - Mengapa untuk kebutuhan php5.6 tidak bisa menggunakan ubuntu 16.04, sehingga perlu diganti os ke debian 9?
+
+Linux Ubuntu 16.04 untuk php5.6 sudah sampai pada akhir LTS nya (long time service) berakhir pada **30 april 2021** kecuali melalui Extended Security Maintenance tahunan berbayar. sedangkan debian 9 masih disupport hinga 2022
+
+  - Kenapa harus menggunakan virtualisasi LXC pada skema website yang akan didevelop?
+
+Virtualisasi menggunakan LXC sangat ringan dan mudah dalam mengelola server.
+
+
+Proxy server dapat menjadi penyedia port jaringan pengguna internet. vm.local yang kita buat pada praktikum ini bisa disebut proxy server karena vm.local agar os dapat mengakses langsung website di browser komputer lokal.
