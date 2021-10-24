@@ -104,7 +104,7 @@ cd /var/lib/lxc/ubuntu_server
 7. Untuk kebutuhan presentasi mereka, browser di laptop mereka harus dapat mengakses ketiga url tersebut.
 
   - Test curl didalam ubuntu server.
-![landing](assets/assets/curl-test.gif)
+![landing](assets/curl-test.gif)
 
   - Test di browser.
 
