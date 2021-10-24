@@ -25,13 +25,15 @@ lxc-ps
   - Kunjungi https://uk.images.linuxcontainers.org/ untuk melihat image yang akan dibuat.
   - installation command
 ```bash
-sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release sid --arch amd64 --no-validate --server uk.images.linuxcontainers.org
+sudo 
+lxc-create -n debian_php5.6 -t download -- --dist debian --release sid --arch amd64 --no-validate --server uk.images.linuxcontainers.org
 ```
 ![debian_install](assets/debian_php5.6.png)
 
 3. Setup nginx pada debian_php5.6 untuk domain http://lxc_php5.dev , buat halaman index.html yang menerangkan informasi nama lxc
   - Static ip debian_php5.6
-```bash nano /etc/network/interfaces
+```bash 
+nano /etc/network/interfaces
 ```
 ![static debian](assets/network interface.png)
   - Setting Nginx Debian
@@ -39,10 +41,15 @@ sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release sid --ar
 cd /etc/nginx/sites-available
 nano lxc_php5.6.dev
 ```
-![Nginx](assets/Set Nginx.png)
-```bash cd /etc/nginx/sites-available
-touch lxc_php5.6.dev
-nano lxc_php5.6.dev
+![Nginx](assets/SetNginx.png)
+```bash
+nano /etc/hosts
 ```
+![Nginx_hosts](assets/hosts.png)
+```bash
+cd /var/www/html/lxc_php5.6
+nano index.php
+```
+![Nginx_hosts](assets/deb_5.6.png)
 
-
+8. 
